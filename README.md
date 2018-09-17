@@ -10,5 +10,21 @@ Player would:
 ## Player's View
 * Orinary View
 
-![playerview](Sniper180917/Pics/SniperRifle.PNG)
+<img src = "Pics.md/SniperRifle.PNG" width = 200 >
+
+Tutrorial on Youtube is [here](https://www.youtube.com/watch?v=adcKX1c-kag).
+
+* Scope View
+
+<img scr = "Pics.md/OnScope.PNG" width = 200>
+
+
+Tutrorial on Youtube is [here](https://www.youtube.com/watch?v=adcKX1c-kag).
+
+* Joystick
+
+<img scr = "Pics.md/Joystick.PNG" width = 200>
+
+Tutrorial on Youtube is [here](https://www.youtube.com/watch?v=uSnZuBhOA2U).
+
 

@@ -1,8 +1,9 @@
-# Sniper 
+# Sniper Game
 
 ## Overview
 Sniper is a FPS game, which allow player to shoot a sniper rifle with the scope on it. There would be 2 scenes in this game.
-Player would:
+
+Player could:
 1. controll the view by joystick.
 2. aim enemies by the scope.
 3. encounter more powerful enimies on the second scene.
@@ -26,5 +27,3 @@ Tutrorial on Youtube is [here](https://www.youtube.com/watch?v=adcKX1c-kag).
 <img src = "Pics.md/Joystick.PNG" width = 300>
 
 Tutrorial on Youtube is [here](https://www.youtube.com/watch?v=uSnZuBhOA2U).
-
-

@@ -10,20 +10,20 @@ Player would:
 ## Player's View
 * Orinary View
 
-<img src = "Pics.md/SniperRifle.PNG" width = 200 >
+<img src = "Pics.md/SniperRifle.PNG" width = 300 >
 
 Tutrorial on Youtube is [here](https://www.youtube.com/watch?v=adcKX1c-kag).
 
 * Scope View
 
-<img scr = "Pics.md/OnScope.PNG" width = 200>
+<img src = "Pics.md/OnScope.PNG" width = 300>
 
 
 Tutrorial on Youtube is [here](https://www.youtube.com/watch?v=adcKX1c-kag).
 
 * Joystick
 
-<img scr = "Pics.md/Joystick.PNG" width = 200>
+<img src = "Pics.md/Joystick.PNG" width = 300>
 
 Tutrorial on Youtube is [here](https://www.youtube.com/watch?v=uSnZuBhOA2U).
 

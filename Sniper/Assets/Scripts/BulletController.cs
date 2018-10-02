@@ -11,24 +11,22 @@ public class BulletController : MonoBehaviour {
     private float nextShoot;
     private GameObject bullet;
 
+    private bool scopeIsOn;
+
     private void Update()
     {
+        scopeIsOn = transform.GetComponentInChildren<ScopeController>().isScoped;
         ShootBullet();
     }
 
     private void FixedUpdate()
     {
-        if(bullet != null)
-            bullet.transform.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);
-        //bullet.transform.GetComponent<Rigidbody>().AddForce(new Vector3(shootDirection.position.x, shootDirection.position.y, 1.0f) * bulletSpeed);
-        //bullet.transform.GetComponent<Rigidbody>().AddForce(shootDirection.position,x,shootDrection.y,1.0f * bulletSpeed);
-        //bullet.transform.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);
-        //bullet.transform.GetComponent<Rigidbody>().AddForce(Input.mousePosition * bulletSpeed);
+        BulletMove();
         StartCoroutine(DestroyBullet(bullet));
     }
     void ShootBullet()
     {
-        if (Input.GetButtonDown("Fire1") && Time.time > nextShoot)
+        if (scopeIsOn && Input.GetButtonDown("Fire1") && Time.time > nextShoot)
         {
             nextShoot = Time.time + shootInterval;
             createBullet();
@@ -44,5 +42,11 @@ public class BulletController : MonoBehaviour {
     {
         yield return new WaitForSeconds(10.0f);
         Destroy(bullet);
+    }
+
+    void BulletMove()
+    {
+        if (bullet != null)
+            bullet.transform.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);
     }
 }

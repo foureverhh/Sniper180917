@@ -6,7 +6,8 @@ public class ScopeController : MonoBehaviour {
 
     public Animator animator;
     private int scopedHash = Animator.StringToHash("Scoped");
-    private bool isScoped = false;
+    [HideInInspector]
+    public bool isScoped = false;
    
     public Camera mainCamera;
     public float scopedFieldOfView = 15f;

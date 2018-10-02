@@ -20,6 +20,10 @@ public class BulletController : MonoBehaviour {
     {
         if(bullet != null)
             bullet.transform.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);
+        //bullet.transform.GetComponent<Rigidbody>().AddForce(new Vector3(shootDirection.position.x, shootDirection.position.y, 1.0f) * bulletSpeed);
+        //bullet.transform.GetComponent<Rigidbody>().AddForce(shootDirection.position,x,shootDrection.y,1.0f * bulletSpeed);
+        //bullet.transform.GetComponent<Rigidbody>().AddForce(transform.forward * bulletSpeed);
+        //bullet.transform.GetComponent<Rigidbody>().AddForce(Input.mousePosition * bulletSpeed);
         StartCoroutine(DestroyBullet(bullet));
     }
     void ShootBullet()

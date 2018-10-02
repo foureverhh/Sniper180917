@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TargeHeartController : MonoBehaviour {
+public class TargetController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

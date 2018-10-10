@@ -5,16 +5,27 @@ using UnityEngine;
 public class ScopeController : MonoBehaviour {
 
     public Animator animator;
-    private int scopedHash = Animator.StringToHash("Scoped");
+    [HideInInspector]
+    public int scopedHash = Animator.StringToHash("Scoped");
     [HideInInspector]
     public bool isScoped = false;
    
     public Camera mainCamera;
     public float scopedFieldOfView = 15f;
-    private float normalFieldOfView;
+    [HideInInspector]
+    public float normalFieldOfView;
 
     public GameObject scopeOverlay;
     public GameObject weaponCamera;
+
+    ReloadBehavior reloadBehavior;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+        reloadBehavior = animator.GetBehaviour<ReloadBehavior>();
+        reloadBehavior.scopeController = this;
+    }
 
     private void Update()
     {
@@ -28,6 +39,7 @@ public class ScopeController : MonoBehaviour {
             else
                 TurnOffScope();
         }
+        Debug.Log("isScoped in ScopeController is: " + isScoped);
     }
 
     void TurnOnScope()
@@ -39,6 +51,7 @@ public class ScopeController : MonoBehaviour {
     {
         yield return new WaitForSeconds(0.15f);
         normalFieldOfView = mainCamera.fieldOfView;
+        Debug.Log(normalFieldOfView);
         mainCamera.fieldOfView = scopedFieldOfView;
         scopeOverlay.SetActive(true);
         weaponCamera.SetActive(false);
